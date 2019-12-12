@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-    <a class="navbar-brand" href="index.php">LHP3 Arena</a>
+    <a class="navbar-brand" href="index.php"><img src="assets/img/logoLhp3Arena.png" alt="logo Lhp3 Arena" class="lhp3Logo" /></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>

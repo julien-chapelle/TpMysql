@@ -13,7 +13,7 @@
                         <p>Téléphone :</p>
                         <p>09 86 27 17 04</p>
                         <p>Adresse :</p>
-                        <p>Adresse : 2 rue Dombasle</p>
+                        <p>2 rue Dombasle</p>
                         <p>76600 Le Havre</p>
                     </div>
                     <div class="col">
