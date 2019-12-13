@@ -17,7 +17,7 @@
 
 </head>
 
-<body>
+<body class="fontBankGothic">
     <div class="container-fluid p-0">
         <!-- Header début -->
         <!-- Header fin -->

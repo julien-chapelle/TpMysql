@@ -1,3 +1,6 @@
+body{
+    background-color: rgba(131, 204, 147, 0.651);
+}
 /* scrollUp button */
 #scrollUp {
     position: fixed;
@@ -16,19 +19,73 @@
 .img404 {
     width: 10rem;
 }
+
 /* Img 404 */
 /* Size logo partenaires */
 .partnerLogo {
-	height: 40px;
+    height: 40px;
 }
+
 /* Size logo partenaires */
 /* Size logo navbar */
 .lhp3Logo {
     height: 30px;
 }
+
 /* Size logo navbar */
 /* Size logo title */
 .lhp3LogoTitle {
     height: 16px;
 }
+
 /* Size logo title */
+/* Size avatar avis */
+.sizeAvatarView {
+    height: 50px;
+}
+
+/* Size avatar avis */
+/* Size picture programmation */
+.sizeShowView {
+    height: 150px;
+}
+
+/* Size picture programmation */
+/* position barre de recherche */
+.marginButtonSearch {
+    margin-top: .5rem;
+    margin: 1rem;
+}
+
+.marginInputSearch {
+    margin-top: .2rem;
+    margin-left: 1rem;
+    width: 50%;
+}
+.bgTranslu {
+    background-color: transparent;
+    box-shadow: none;
+}
+/* position barre de recherche */
+/* Fonts */
+.fontBankGothic {
+    font-family: "BankGothic Md BT";
+}
+
+@font-face {
+    font-family: "BankGothic Md BT";
+    src: url("../font/BankGothic Md BT.ttf");
+}
+
+/* Fonts */
+/* Text size */
+.textSize1 {
+    font-size: 6rem;
+}
+.textSize2 {
+    font-size: 4rem;
+}
+.textSize3 {
+    font-size: 2rem;
+}
+/* Text size */

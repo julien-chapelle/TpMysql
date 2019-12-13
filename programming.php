@@ -1,3 +1,5 @@
+<?php require('models/Query.php'); ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -17,14 +19,36 @@
 
 </head>
 
-<body>
+<body class="fontBankGothic">
     <div class="container-fluid p-0">
         <!-- Header début -->
         <!-- Header fin -->
         <!-- navbar début -->
         <?php include('views/navBar.php'); ?>
         <!-- navbar fin -->
+        <!-- media object programmation début -->
+        <?php foreach ($data->query($media_object_shows) as $row) { ?>
 
+            <p class="mt-0 ml-3 h2"><?= strftime('%B', strtotime($row['date'])) ?></p>
+
+            <?php foreach ($data->query($media_object_shows) as $row) { ?>
+                <div class="row media p-3 mx-3 my-5 shadow justify-content-left">
+                    <div class="col">
+                        <p class="mt-0 h4"><?= $row['type'] ?></p>
+                        <img src="<?= $row['picture'] ?>" class="mr-3 sizeShowView rounded" alt="<?= 'image concert de ' . $row['performer'] ?>">
+                    </div>
+                    <div class="col text-center">
+                        <p class="mt-0 h4"><?= $row['title'] . ':' ?></p>
+                        <p class="h6"><?= 'Artiste : ' . $row['performer'] . ' - ' . $row['genre'] . ' / ' . $row['genre'] ?></p>
+                        <p class="h5"><?= 'Le ' . strftime('%d %B %Y', strtotime($row['date'])) . ' à ' . strftime('%HH%M', strtotime($row['startTime'])) ?></p>
+                        <p class="h6"><?= 'Durée ' . strftime('%HH', strtotime($row['duration'])) ?></p>
+                        <a class="btn btn-outline-warning btn-sm" href="<?= $row['officialSite'] ?>" target="_blank" title="Aller vers site officiel">Site officiel</a>
+                        <input class="btn btn-outline-warning btn-sm" value="Reserver" type="submit" title="Reserver billet" />
+                    </div>
+                </div>
+        <?php };
+        }; ?>
+        <!-- media object programmation fin -->
         <!-- footer début -->
         <?php include('views/footer.php'); ?>
         <!-- footer fin -->

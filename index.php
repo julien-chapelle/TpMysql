@@ -1,4 +1,4 @@
-<?php require('models/carouselQuery.php'); ?>
+<?php require('models/Query.php'); ?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -19,7 +19,7 @@
 
 </head>
 
-<body>
+<body class="fontBankGothic">
     <div class="container-fluid p-0">
         <!-- Header début -->
         <!-- Header fin -->
@@ -27,39 +27,23 @@
         <?php include('views/navBar.php'); ?>
         <!-- navbar fin -->
         <!-- carousel début -->
-        <div id="carouselExampleCaptions" class="carousel slide my-5" data-ride="carousel">
+        <div id="carouselExampleCaptions" class="carousel slide my-2" data-ride="carousel">
             <ol class="carousel-indicators">
-            <!-- <?php foreach ($data->query($carousel) as $row) { ?> -->
-                <li data-target="#carouselExampleCaptions" data-slide-to="<?= $row['id'] ?>"></li>
-                <?php }; ?>
-                <!-- <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li> -->
+                <li data-target="#carouselExampleCaptions" data-slide-to="active"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
                 <?php foreach ($data->query($carousel) as $row) { ?>
-                    <div class="carousel-item active">
+                    <div class="carousel-item <?= $row['id'] == 5 ? 'active' : '' ?>">
                         <img src="<?= $row['picture'] ?>" class="d-block w-100" alt="<?= 'Photo' . $row['performer'] ?>">
-                        <div class="carousel-caption d-none d-md-block text-left">
-                            <p class="h1"><?= $row['performer'] ?></p>
-                            <p class="h2"><?= $row['title'] ?></p>
-                            <p class="h3"><?= 'Le ' . strftime('%d %B %Y', strtotime($row['date'])) ?></p>
+                        <div class="carousel-caption d-none d-md-block text-left text-danger">
+                            <p class="textSize3 text-danger shadow-lg p-3 mb-5 rounded"><?= $row['performer'] ?></p>
+                            <p class="textSize2 font-weight-bold text-warning"><?= $row['title'] ?></p>
+                            <p class="textSize2 font-weight-bold text-danger"><?= 'Le ' . strftime('%d %B %Y', strtotime($row['date'])) ?></p>
                         </div>
                     </div>
                 <?php }; ?>
-                <!-- <div class="carousel-item">
-                    <img src="assets/img_shows/asgeir.jpg" class="d-block w-100" alt="Photo Àsgeir">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="assets/img_shows/mayer.jpg" class="d-block w-100" alt="Photo John Mayer">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Third slide label</h5>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                    </div>
-                </div> -->
             </div>
             <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -71,6 +55,36 @@
             </a>
         </div>
         <!-- carousel fin -->
+        <!-- carousel media object avis début -->
+        <div id="carouselExampleCaptionsMedia" class="carousel slide my-2" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptionsMedia" data-slide-to="active"></li>
+                <li data-target="#carouselExampleCaptionsMedia" data-slide-to="1"></li>
+                <li data-target="#carouselExampleCaptionsMedia" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <?php foreach ($data->query($media_object_view) as $row) { ?>
+                    <div class="carousel-item <?= $row['id'] == 1 ? 'active' : '' ?>">
+                        <div class="media p-3 m-3 shadow">
+                            <img src="<?= $row['picture'] ?>" class="mr-3 sizeAvatarView" alt="<?= 'imageAvatar' . $row['firstname'] ?>">
+                            <div class="media-body">
+                                <h5 class="mt-0"><?= $row['firstname'] . ':' ?></h5>
+                                <?= $row['viewClients'] ?>
+                            </div>
+                        </div>
+                    </div>
+                <?php }; ?>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleCaptionsMedia" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptionsMedia" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <!-- carousel media object avis fin -->
 
 
 
