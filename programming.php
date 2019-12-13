@@ -27,11 +27,15 @@
         <?php include('views/navBar.php'); ?>
         <!-- navbar fin -->
         <!-- media object programmation début -->
-        <?php foreach ($data->query($media_object_shows) as $row) { ?>
+        <?php foreach ($data->query($media_object_month) as $row) { ?>
+            <p class="mt-0 mx-3 h2 border-top border-bottom"><?= strftime('%B %Y', strtotime($row['DATE_FORMAT(`date`, "%M %Y")'])) ?></p>
 
-            <p class="mt-0 ml-3 h2"><?= strftime('%B', strtotime($row['date'])) ?></p>
+            <?php $dateShow = strftime('%B %Y', strtotime($row['DATE_FORMAT(`date`, "%M %Y")']));
+                foreach ($data->query($media_object_shows) as $row) {
 
-            <?php foreach ($data->query($media_object_shows) as $row) { ?>
+                    if ($dateShow != strftime('%B %Y', strtotime($row['date']))) {
+                        continue;
+                    }; ?>
                 <div class="row media p-3 mx-3 my-5 shadow justify-content-left">
                     <div class="col">
                         <p class="mt-0 h4"><?= $row['type'] ?></p>

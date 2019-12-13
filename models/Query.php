@@ -21,3 +21,7 @@ $media_object_shows = 'SELECT `shows`.`title`, `shows`.`performer`, `shows`.`dat
             LEFT JOIN `genres`
             ON `shows`.`firstGenresId`=`genres`.`id`
             ORDER BY `date`';
+
+$media_object_month = 'SELECT DISTINCT DATE_FORMAT(`date`, "%M %Y")
+            FROM `shows`
+            ORDER BY `date` ASC';

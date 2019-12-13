@@ -1,5 +1,5 @@
 body{
-    background-color: rgba(131, 204, 147, 0.651);
+    background-color: #2dace38c;
 }
 /* scrollUp button */
 #scrollUp {
@@ -10,7 +10,7 @@ body{
 }
 
 .scrollUpColor {
-    color: #7ad19e;
+    color: #1a4867;
     opacity: 0.7;
 }
 
