@@ -35,7 +35,7 @@
                     Pour exercer ce droit, il vous suffit de cliquer sur « se désabonner » présent en bas de chacune de nos newsletters ou de nous écrire à l’adresse service-clients@myticket.fr en précisant « Données personnelles » dans l’objet.</P>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="modal">Fermer</button>
+                <button type="button" class="btn btn-outline-warning btn-sm" data-dismiss="modal">Fermer</button>
             </div>
         </div>
     </div>

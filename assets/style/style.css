@@ -1,5 +1,10 @@
 body{
-    background-color: #2dace38c;
+    background: url("../img/volcan.jpg");
+    background-position: left;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 /* scrollUp button */
 #scrollUp {
@@ -66,6 +71,9 @@ body{
     background-color: transparent;
     box-shadow: none;
 }
+.bgTransluCard {
+    background-color: rgba(106, 159, 202, 0.548);
+}
 /* position barre de recherche */
 /* Fonts */
 .fontBankGothic {
@@ -89,3 +97,37 @@ body{
     font-size: 2rem;
 }
 /* Text size */
+/* Text color */
+.textColor1 {
+    color: #2dabe3;
+}
+.textColor2 {
+    color: #1a4867;
+}
+/* Text color */
+/* Zoom card programming */
+.media {
+    -webkit-transition: all 0.5s ease;
+    /* Safari et Chrome */
+    -moz-transition: all 0.5s ease;
+    /* Firefox */
+    -ms-transition: all 0.5s ease;
+    /* Internet Explorer 9 */
+    -o-transition: all 0.5s ease;
+    /* Opera */
+    transition: all 0.5s ease;
+}
+
+.media:hover {
+    /* L'image est grossie de 25% */
+    -webkit-transform: scale(1.01);
+    /* Safari et Chrome */
+    -moz-transform: scale(1.01);
+    /* Firefox */
+    -ms-transform: scale(1.01);
+    /* Internet Explorer 9 */
+    -o-transform: scale(1.01);
+    /* Opera */
+    transform: scale(1.01);
+}
+/* Zoom card programming */

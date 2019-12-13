@@ -27,7 +27,7 @@
         <?php include('views/navBar.php'); ?>
         <!-- navbar fin -->
         <!-- carousel début -->
-        <div id="carouselExampleCaptions" class="carousel slide my-2" data-ride="carousel">
+        <div id="carouselExampleCaptions" class="carousel slide m-5" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleCaptions" data-slide-to="active"></li>
                 <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
@@ -36,7 +36,7 @@
             <div class="carousel-inner">
                 <?php foreach ($data->query($carousel) as $row) { ?>
                     <div class="carousel-item <?= $row['id'] == 5 ? 'active' : '' ?>">
-                        <img src="<?= $row['picture'] ?>" class="d-block w-100" alt="<?= 'Photo' . $row['performer'] ?>">
+                        <img src="<?= $row['picture'] ?>" class="d-block w-100 rounded" alt="<?= 'Photo' . $row['performer'] ?>">
                         <div class="carousel-caption d-none d-md-block text-left text-danger">
                             <p class="textSize3 text-danger shadow-lg p-3 mb-5 rounded"><?= $row['performer'] ?></p>
                             <p class="textSize2 font-weight-bold text-warning"><?= $row['title'] ?></p>
@@ -65,7 +65,7 @@
             <div class="carousel-inner">
                 <?php foreach ($data->query($media_object_view) as $row) { ?>
                     <div class="carousel-item <?= $row['id'] == 1 ? 'active' : '' ?>">
-                        <div class="media p-3 m-3 shadow">
+                        <div class="media p-3 m-3 shadow bgTransluCard rounded">
                             <img src="<?= $row['picture'] ?>" class="mr-3 sizeAvatarView" alt="<?= 'imageAvatar' . $row['firstname'] ?>">
                             <div class="media-body">
                                 <h5 class="mt-0"><?= $row['firstname'] . ':' ?></h5>
