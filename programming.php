@@ -38,7 +38,7 @@
                     }; ?>
                 <div class="row media p-3 mx-3 my-5 shadow justify-content-left bgTransluCard rounded" title="<?= 'Concert à venir de ' . $row['performer'] ?>">
                     <div class="col">
-                        <p class="mt-0 h4"><?= $row['type'] ?></p>
+                        <p class="mt-0 h5 text-white"><?= $row['type'] ?></p>
                         <img src="<?= $row['picture'] ?>" class="mx-auto sizeShowView rounded" alt="<?= 'image concert de ' . $row['performer'] ?>">
                     </div>
                     <div class="col text-center">
