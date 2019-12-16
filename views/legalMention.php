@@ -8,7 +8,7 @@
                 </button>
             </div>
             <div class="modal-body h6">
-                <p>Conception du site internet par :</p>
+                <p class="font-weight-bold">Conception du site internet par :</p>
 
                 <p>LaManu Agency
                     2 rue Dombasle
@@ -22,12 +22,12 @@
                     76600 LE HAVRE
                     09 86 27 17 04</p>
 
-                <p>Crédits photos :</p>
+                <p class="font-weight-bold">Crédits photos :</p>
 
                 <p>Les photos publiées sur le site Internet https://www.lhp3arena.fr sont la propriété de la LHP3 Arena ou de ses partenaires.
                     Ces visuels sont protégés par des droits d'auteur ; il est donc interdit de les copier ou de les diffuser sans accord écrit (cf. Art. L. 122-4 du Code de la Propriété Intellectuelle (CPI) : "Toute représentation ou reproduction intégrale ou partielle faite sans le consentement de l’auteur ou de ses ayants droit ou ayants cause est illicite.")</p>
 
-                <p>Newsletter :</p>
+                <p class="font-weight-bold">Newsletter :</p>
 
                 <p>Pour être informés en avant-première de notre actualité et bénéficier de nos meilleurs offres, abonnez-vous à notre newsletter ! L'inscription et la diffusion sont entièrement gratuites.</p>
                 <p>Afin de mieux répondre à vos attentes, les informations recueillies lors de votre abonnement pourront faire l'objet d'un traitement informatique de la part de notre service marketing. Cependant, vos données ne seront ni louées, ni vendues à des tiers.</p>

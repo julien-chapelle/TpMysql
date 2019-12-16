@@ -21,21 +21,37 @@ USE colyseum;
 --             FROM `shows`
 --             LEFT JOIN `showtypes`
 --             ON `shows`.`showTypesId`=`showtypes`.`id`
---             LEFT JOIN `genres`
+--             LEFT JOIN `genres` AS `table2`
 --             ON `shows`.`firstGenresId`=`genres`.`id`
---             ORDER BY
---             (CASE
---                 WHEN `genre_2`='3' THEN INSERT('3', 1, 1, 'Pop/Rock')
---                 WHEN `genre_2`='4' THEN INSERT('4', 1, 1, 'Musique électronique')
---                 WHEN `genre_2`='5' THEN INSERT('5', 1, 1, 'Folk')
---                 WHEN `genre_2`='13' THEN INSERT('13', 1, 1, 'Funk')
---                 ELSE 'autre'
---             END);
+
+            SELECT `shows`.`title`, `shows`.`performer`, `shows`.`date`, `shows`.`startTime`, `shows`.`picture`, `shows`.`officialSite`, `shows`.`duration`, `showtypes`.`type`, `shows`.`firstGenresId`, `shows`.`secondGenreId`, `genres`.`id`, `genres`.`genre`,
+            CASE 
+            WHEN `shows`.`secondGenreId`='3' THEN 'Pop/Rock'
+            WHEN `shows`.`secondGenreId`='4' THEN 'Musique électronique'
+            WHEN `shows`.`secondGenreId`='5' THEN 'Folk'
+            WHEN `shows`.`secondGenreId`='13' THEN 'Funk'
+            ELSE 'autre'
+            END AS 'genre2'
+            FROM `shows`
+            LEFT JOIN `showtypes`
+            ON `shows`.`showTypesId`=`showtypes`.`id`
+            LEFT JOIN `genres`
+            ON `shows`.`firstGenresId`=`genres`.`id`;
 
 -- SELECT DISTINCT DATE_FORMAT(`date`, '%M')
 -- FROM `shows`
 -- ORDER BY `date` ASC;
 
+
+-- OK
+-- $media_object_shows = 'SELECT `shows`.`title`, `shows`.`performer`, `shows`.`date`, `shows`.`startTime`, `shows`.`picture`, `shows`.`officialSite`, `shows`.`duration`, `showtypes`.`type`, `shows`.`firstGenresId`, `shows`.`secondGenreId`, `genres`.`id`, `genres`.`genre`
+--             FROM `shows`
+--             LEFT JOIN `showtypes`
+--             ON `shows`.`showTypesId`=`showtypes`.`id`
+--             LEFT JOIN `genres`
+--             ON `shows`.`firstGenresId`=`genres`.`id`
+--             ORDER BY `date`';
+-- OK
 
 
 

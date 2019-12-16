@@ -7,7 +7,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body mx-3 justify-content-center">
+            <div class="modal-body mx-2 py-2 px-0 justify-content-center">
                 <div class="row mx-auto">
                     <div class="col h6 text-center p-0 pr-3">
                         <p>Téléphone :</p>

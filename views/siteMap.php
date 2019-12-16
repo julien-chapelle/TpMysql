@@ -10,7 +10,7 @@
             <div class="modal-body mx-3 justify-content-center">
                 <div class="row mx-auto">
                     <h2 class="col h6 text-center">
-                        <ul>
+                        <ul class="p-0">
                             <li><a href="index.php" title="Lien vers accueil">Accueil</a></li>
                             <li><a href="programming.php" title="Lien vers accueil">Programmation</a></li>
                             <li><a href="ticketing.php" title="Lien vers accueil">Billeterie</a></li>

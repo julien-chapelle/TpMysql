@@ -28,7 +28,7 @@
         <!-- navbar fin -->
         <!-- media object programmation début -->
         <?php foreach ($data->query($media_object_month) as $row) { ?>
-            <p class="mt-0 mx-3 h2 border-top border-bottom textColor1"><?= strftime('%B %Y', strtotime($row['DATE_FORMAT(`date`, "%M %Y")'])) ?></p>
+            <p class="mt-0 mx-3 h2 border-top border-bottom textColor1" title="<?='Programmation du mois de ' . strftime('%B %Y', strtotime($row['DATE_FORMAT(`date`, "%M %Y")'])) ?>"><?= strftime('%B %Y', strtotime($row['DATE_FORMAT(`date`, "%M %Y")'])) ?></p>
 
             <?php $dateShow = strftime('%B %Y', strtotime($row['DATE_FORMAT(`date`, "%M %Y")']));
                 foreach ($data->query($media_object_shows) as $row) {
@@ -36,14 +36,14 @@
                     if ($dateShow != strftime('%B %Y', strtotime($row['date']))) {
                         continue;
                     }; ?>
-                <div class="row media p-3 mx-3 my-5 shadow justify-content-left bgTransluCard rounded">
+                <div class="row media p-3 mx-3 my-5 shadow justify-content-left bgTransluCard rounded" title="<?= 'Concert à venir de ' . $row['performer'] ?>">
                     <div class="col">
                         <p class="mt-0 h4"><?= $row['type'] ?></p>
                         <img src="<?= $row['picture'] ?>" class="mx-auto sizeShowView rounded" alt="<?= 'image concert de ' . $row['performer'] ?>">
                     </div>
                     <div class="col text-center">
                         <p class="mt-0 h4"><?= $row['title'] . ':' ?></p>
-                        <p class="h6"><?= 'Artiste : ' . $row['performer'] . ' - ' . $row['genre'] . ' / ' . $row['genre'] ?></p>
+                        <p class="h6"><?= 'Artiste : ' . $row['performer'] . ' - ' . $row['genre'] . ' / ' . $row['genre2'] ?></p>
                         <p class="h5"><?= 'Le ' . strftime('%d %B %Y', strtotime($row['date'])) . ' à ' . strftime('%HH%M', strtotime($row['startTime'])) ?></p>
                         <p class="h6"><?= 'Durée ' . strftime('%HH', strtotime($row['duration'])) ?></p>
                         <a class="btn btn-outline-warning btn-sm" href="<?= $row['officialSite'] ?>" target="_blank" title="Aller vers site officiel">Site officiel</a>

@@ -36,7 +36,7 @@
             <div class="carousel-inner">
                 <?php foreach ($data->query($carousel) as $row) { ?>
                     <div class="carousel-item <?= $row['id'] == 5 ? 'active' : '' ?>">
-                        <img src="<?= $row['picture'] ?>" class="d-block w-100 rounded" alt="<?= 'Photo' . $row['performer'] ?>">
+                        <img src="<?= $row['picture'] ?>" class="d-block w-100 rounded" alt="<?= 'Photo de ' . $row['performer'] ?>"  title="<?= 'Concert à venir de ' . $row['performer'] ?>">
                         <div class="carousel-caption d-none d-md-block text-left text-danger">
                             <p class="textSize3 text-danger shadow-lg p-3 mb-5 rounded"><?= $row['performer'] ?></p>
                             <p class="textSize2 font-weight-bold text-warning"><?= $row['title'] ?></p>
@@ -56,14 +56,17 @@
         </div>
         <!-- carousel fin -->
         <!-- carousel media object avis début -->
-        <div id="carouselExampleCaptionsMedia" class="carousel slide my-2" data-ride="carousel">
+        <div id="carouselExampleCaptionsMedia" class="carousel slide my-2" data-ride="carousel" title="Avis clients">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleCaptionsMedia" data-slide-to="active"></li>
                 <li data-target="#carouselExampleCaptionsMedia" data-slide-to="1"></li>
                 <li data-target="#carouselExampleCaptionsMedia" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
-                <?php foreach ($data->query($media_object_view) as $row) { ?>
+                <?php foreach ($data->query($media_object_view) as $row) {
+                        if (empty($row['picture']) && empty($row['viewClients'])) {
+                            continue;
+                        }; ?>
                     <div class="carousel-item <?= $row['id'] == 1 ? 'active' : '' ?>">
                         <div class="media p-3 m-3 shadow bgTransluCard rounded">
                             <img src="<?= $row['picture'] ?>" class="mr-3 sizeAvatarView" alt="<?= 'imageAvatar' . $row['firstname'] ?>">

@@ -1,10 +1,10 @@
-<footer class="row text-center bg-light px-3 py-2 m-0 justify-content-around">
-    <a class="text-dark" title="Mentions légales" data-toggle="modal" data-target="#legalMention">Mentions légales</a>
-    <a class="text-dark" title="Plan du site" data-toggle="modal" data-target="#siteMap">Plan du site</a>
-    <a class="text-dark" title="Adresse & contact" data-toggle="modal" data-target="#contact">Info</a>
+<footer class="row text-center bg-light px-2 py-2 m-0 justify-content-around">
+    <a class="text-dark border border-top-0 border-dark p-1" title="Mentions légales" data-toggle="modal" data-target="#legalMention">Mentions légales</a>
+    <a class="text-dark border border-bottom-0 border-dark p-1" title="Plan du site" data-toggle="modal" data-target="#siteMap">Plan du site</a>
+    <a class="text-dark border border-top-0 border-dark p-1" title="Adresse & contact" data-toggle="modal" data-target="#contact">Info</a>
 </footer>
 <footer class="row text-center bg-light text-dark px-3 py-2 m-0 footerTextSize border-top border-dark">
-    <p class="col-12 p-0">Remerciement à nos partenaires</p>
+    <p class="col-12 p-0">Remerciement à nos partenaires:</p>
     <div class="col">
         <img src="assets/img/iTunesLogo.png" title="iTunes logo" class="partnerLogo mb-3" />
     </div>
